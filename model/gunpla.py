@@ -7,9 +7,9 @@ class GunplaInfo(Base):
     __tablename__ = "gunpla_info"
     gunpla_id = Column(Integer, primary_key=True)
     gunpla_name = Column(Text, (30))
-    media_type = Column(Text, ForeignKey("media.media_type"), nullable=False)
+    title = Column(Text, ForeignKey("media.title"), nullable=False)
     rating_design = Column(Float)
     
 
     def __repr__(self):
-        return f"GunplaInfo(gunpla_id={self.gunpla_id}, gunpla_name={self.gunpla_name}, media_type={self.media_type}, rating_design={self.rating_design})"
+        return f"GunplaInfo(gunpla_id={self.gunpla_id}, gunpla_name={self.gunpla_name}, title={self.title}, rating_design={self.rating_design})"
