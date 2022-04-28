@@ -15,10 +15,13 @@ class MediaDao:
     def get_media_by_title(self, title):
         return self.__session.query(MediaModel).filter(MediaModel.title == title).all()
     
+    def get_media_by_media_type(self, media_type):
+        return self.__session.query(MediaModel).filter(MediaModel.media_type == media_type).all()
+    
     def get_media_by_release_date(self, release_date):
         return self.__session.query(MediaModel).filter(MediaModel.release_date == release_date).all()
     
-    def add_new_timeline(self, timeline: MediaModel):
-        self.__session.add(timeline)
+    def add_new_title(self, title: MediaModel):
+        self.__session.add(title)
         self.__session.commit()
-        print("new timeline added to the database.")
+        print("new title added to the database.")
