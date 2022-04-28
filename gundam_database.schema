@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS medias (
+    title_id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    media_type TEXT NOT NULL,
+    release_date TEXT NOT NULL,
+    timeline TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS gunpla_info (
+    gunpla_id INTEGER PRIMARY KEY,
+    gunpla_name TEXT NOT NULL,
+    title TEXT NOT NULL,
+    rating_design FLOAT NOT NULL,
+    FOREIGN KEY (title) REFERENCES medias (title)
+);

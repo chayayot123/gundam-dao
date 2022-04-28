@@ -3,7 +3,7 @@ from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
-class Media(Base):
+class MediaModel(Base):
     __tablename__ = "medias"
     title_id = Column(Integer, primary_key=True)
     title = Column(Text, (30))
