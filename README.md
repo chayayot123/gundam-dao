@@ -11,7 +11,7 @@
 3. media_type - Type of the media that have been show.
 4. release_date - The year that release to show.
 5. timeline - The timeline of the gundam universe.
-6. 
+
 #### Setup
         
         create database from command line
