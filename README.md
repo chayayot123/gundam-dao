@@ -11,17 +11,17 @@
 3. media_type - Type of the media that have been show.
 4. release_date - The year that release to show.
 5. timeline - The timeline of the gundam universe.
-6. 
+
 #### Setup
         
         create database from command line
-        >>> sqllite3 genshin-data.db < genshin-db.schema
+        >>> sqllite3 sample.db < gundam_database.schema
 
         import the csv file
-        >>> sqllite3 genshin-data.db
+        >>> sqllite3 sample.db
         .mode csv
-        .import data/character_data.csv characters
-        .import data/weapon_data.csv weapons
+        .import data/gunpla_data.csv gunpla_info
+        .import data/Media_data.csv medias
 
 #### UML Class Diagram
 [UML](../../wiki/uml-class-diagram)
