@@ -15,13 +15,17 @@
 #### Setup
         
         create database from command line
-        >>> sqllite3 sample.db < gundam_database.schema
+        >>> sqlite3 sample.db < gundam_database.schema
 
         import the csv file
-        >>> sqllite3 sample.db
-        .mode csv
-        .import data/gunpla_data.csv gunpla_info
-        .import data/Media_data.csv medias
+
+        ```
+        >>> sqlite3 sample.db
+        sqlite3> .mode csv
+        sqlite3> .import data/gunpla_data.csv gunpla_info
+        sqlite3> .import data/Media_data.csv medias
+        sqlite3> .quit
+        ```
 
 #### UML Class Diagram
 [UML](../../wiki/uml-class-diagram)

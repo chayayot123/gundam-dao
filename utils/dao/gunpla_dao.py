@@ -1,5 +1,5 @@
 from model.gunpla_model import GunplaModel
-from sqlalchemy.orm.session import Session
+from sqlalchemy.orm import Session
 
 class GunplaDao:
 
@@ -10,7 +10,7 @@ class GunplaDao:
         return self.__session.query(GunplaModel).all()
 
     def get_gunpla_by_id(self, gunpla_id):
-        return self.__session.query(GunplaModel).filter(GunplaModel.gunpla_id == gunpla_id)[0]
+        return self.__session.query(GunplaModel).filter(GunplaModel.gunpla_id == gunpla_id).first()
     
     def get_gunpla_by_name(self, gunpla_name):
         return self.__session.query(GunplaModel).filter(GunplaModel.gunpla_name == gunpla_name).all()
@@ -21,7 +21,7 @@ class GunplaDao:
     def get_gunpla_by_rating_design(self, rating_design):
         return self.__session.query(GunplaModel).filter(GunplaModel.rating_design == rating_design).all()
 
-    def add_new_gunpla_name(self, gunpla_name: GunplaModel):
-        self.__session.add(gunpla_name)
+    def add_new_gunpla(self, gunpla_model: GunplaModel):
+        self.__session.add(gunpla_model)
         self.__session.commit()
         print("new gunpla name added to the database.")

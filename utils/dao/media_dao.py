@@ -1,5 +1,5 @@
 from model.media_model import MediaModel
-from sqlalchemy.orm.session import Session
+from sqlalchemy.orm import Session
 
 class MediaDao:
 
@@ -10,7 +10,7 @@ class MediaDao:
         return self.__session.query(MediaModel).all()
 
     def get_media_by_id(self, title_id):
-        return self.__session.query(MediaModel).filter(MediaModel.title_id == title_id)[0]
+        return self.__session.query(MediaModel).filter(MediaModel.title_id == title_id).first()
     
     def get_media_by_title(self, title):
         return self.__session.query(MediaModel).filter(MediaModel.title == title).all()
