@@ -27,6 +27,6 @@ media_dao = gundam.get_media_dao()
 # new_media = MediaModel(title_id = 100, title= "The UNKNOW",media_type = "ONA", release_date = "2055", timeline = "UC1029")
 # media_dao.add_new_title(new_media)
 
-@app.get("/gunpla/")
-async def root():
-     return {"info": gunpla_dao.get_all_gunpla()}
+# @app.get("/gunpla/")
+# async def root():
+#      return {"info": gunpla_dao.get_all_gunpla()}
