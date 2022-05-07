@@ -31,6 +31,4 @@
 #### UML Class Diagram
 [UML](../../wiki/uml-class-diagram)
 
-#### Package Diagram
-[Package Diagram](../../wiki/package-diagram)
 [Web API Service](../../wiki/Web-API-Service)

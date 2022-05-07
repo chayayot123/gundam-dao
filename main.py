@@ -1,9 +1,9 @@
 from utils.gundam import Gundam
 from model.gunpla_model import GunplaModel
 from model.media_model import MediaModel
-# from fastapi import FastAPI
+from fastapi import FastAPI
 
-# app = FastAPI()
+app = FastAPI()
 
 gundam = Gundam()
 
@@ -26,3 +26,7 @@ media_dao = gundam.get_media_dao()
 # print(media_dao.get_media_by_release_date("2017"))
 # new_media = MediaModel(title_id = 100, title= "The UNKNOW",media_type = "ONA", release_date = "2055", timeline = "UC1029")
 # media_dao.add_new_title(new_media)
+
+@app.get("/gunpla/")
+async def root():
+     return {"info": gunpla_dao.get_all_gunpla()}
