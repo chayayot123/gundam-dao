@@ -3,7 +3,7 @@ from model.gunpla_model import GunplaModel
 from model.media_model import MediaModel
 # from fastapi import FastAPI
 
-app = FastAPI()
+# app = FastAPI()
 
 gundam = Gundam()
 
