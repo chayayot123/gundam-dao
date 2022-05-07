@@ -29,6 +29,6 @@
 
 
 #### UML Class Diagram
-[UML](../../wiki/uml-class-diagram)
+[UML](https://github.com/chayayot123/gundam-dao/wiki/UML-diagram)
 
 [Web API Service](../../wiki/Web-API-Service)
